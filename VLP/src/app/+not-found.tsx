@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View } from 'react-native';
+import styles from '../styles/nav.styles';
 import { Link, Stack } from 'expo-router';
 
 export default function NotFound() {
@@ -14,17 +15,3 @@ export default function NotFound() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#25292e',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  button: {
-    fontSize: 20,
-    textDecorationLine: 'underline',
-    color: '#fff',
-  },
-});
