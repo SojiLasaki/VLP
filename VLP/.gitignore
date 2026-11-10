@@ -15,8 +15,10 @@ expo-env.d.ts
 *.jks
 *.p8
 *.p12
+*.pfx
 *.key
 *.mobileprovision
+credentials.json
 
 # Metro
 .metro-health-check*
@@ -30,8 +32,10 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
+# environment files (keep a sanitized example if needed)
+.env
+.env.*
+!.env.example
 
 # typescript
 *.tsbuildinfo
