@@ -1,0 +1,48 @@
+import { StyleSheet } from 'react-native';
+import { colors } from './colors';
+import type { Palette } from './theme';
+
+const createHomeStyles = (palette: Palette) => StyleSheet.create({
+  container: { flex: 1, backgroundColor: palette.background },
+  content: { paddingHorizontal: 24, paddingTop: 32, paddingBottom: 48, maxWidth: 720, width: '100%', alignSelf: 'center' },
+  eyebrow: { color: palette.accent, fontWeight: '700', fontSize: 11, letterSpacing: 1.5, marginBottom: 10 },
+  title: { color: palette.text, fontSize: 34, fontWeight: '700', letterSpacing: -1 },
+  subtitle: { color: palette.secondary, fontSize: 15, lineHeight: 23, marginTop: 8 },
+  uploadCard: { marginTop: 30, backgroundColor: palette.surface, borderRadius: 18, alignItems: 'center', paddingHorizontal: 24, paddingVertical: 30 },
+  uploadIcon: { color: palette.accent, backgroundColor: palette.accentSurface, overflow: 'hidden', borderRadius: 24, width: 48, height: 48, textAlign: 'center', lineHeight: 48, fontSize: 28, fontWeight: '600', marginBottom: 16 },
+  uploadTitle: { fontSize: 18, fontWeight: '700', color: palette.text },
+  uploadDescription: { marginTop: 8, color: palette.secondary, textAlign: 'center', lineHeight: 21 },
+  selectButton: { backgroundColor: colors.orange, borderRadius: 9, paddingVertical: 13, paddingHorizontal: 24, marginTop: 20 },
+  selectButtonText: { color: '#241200', fontSize: 15, fontWeight: '700' },
+  pressed: { opacity: 0.7 },
+  fileHint: { color: palette.muted, fontSize: 12, marginTop: 15 },
+  sectionHeading: { marginTop: 38, marginBottom: 18 },
+  sectionTitle: { color: palette.text, fontSize: 20, fontWeight: '700' },
+  sectionSubtitle: { color: palette.secondary, fontSize: 13, marginTop: 5 },
+  emptyState: { backgroundColor: palette.surface, borderRadius: 14, padding: 24 },
+  emptyTitle: { color: palette.text, fontSize: 15, fontWeight: '600' },
+  emptyText: { color: palette.muted, fontSize: 13, marginTop: 6 },
+  list: { backgroundColor: palette.surface, borderRadius: 14, overflow: 'hidden' },
+  fileRow: { flexDirection: 'row', alignItems: 'center' },
+  fileButton: { flex: 1, flexDirection: 'row', alignItems: 'center', paddingVertical: 16, paddingLeft: 16 },
+  fileIcon: { width: 42, height: 48, backgroundColor: palette.accentSurface, borderRadius: 8, alignItems: 'center', justifyContent: 'center' },
+  fileIconText: { color: palette.accent, fontSize: 10, fontWeight: '700' },
+  fileDetails: { flex: 1, marginLeft: 14 },
+  fileName: { color: palette.text, fontSize: 15, fontWeight: '600' },
+  fileTime: { color: palette.muted, fontSize: 12, marginTop: 5 },
+  iconButton: { width: 40, height: 48, alignItems: 'center', justifyContent: 'center' },
+  chevron: { width: 9, height: 9, borderRightWidth: 2, borderTopWidth: 2, borderColor: palette.muted, transform: [{ rotate: '45deg' }] },
+  removeButton: { width: 48, height: 48, alignItems: 'center', justifyContent: 'center' },
+  dots: { height: 20, justifyContent: 'space-between', alignItems: 'center' },
+  dot: { width: 3, height: 3, borderRadius: 2, backgroundColor: palette.secondary },
+  errorText: { color: palette.error, marginBottom: 16, lineHeight: 20 },
+  modalOverlay: { flex: 1, backgroundColor: palette.overlay, justifyContent: 'center', padding: 24 },
+  modalCard: { backgroundColor: palette.surface, borderRadius: 16, padding: 24, width: '100%', maxWidth: 420, alignSelf: 'center' },
+  modalTitle: { color: palette.text, fontSize: 18, fontWeight: '700', marginBottom: 10 },
+  modalDescription: { color: palette.secondary, fontSize: 14, lineHeight: 21, marginBottom: 12 },
+  modalAction: { paddingVertical: 15, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.border },
+  modalActionText: { color: palette.text, fontSize: 16, fontWeight: '600' },
+  destructiveText: { color: palette.error, fontSize: 16, fontWeight: '600' },
+});
+
+export default createHomeStyles;

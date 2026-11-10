@@ -2,6 +2,27 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Viewing documents
+
+Choose a PDF, plain text, JPG, or PNG file on Home to open it in the document viewer.
+Recent documents are stored locally on the device, including a copy of each file,
+and can be reopened or removed from Home. Removing a recent document deletes the
+app's copy, not the original. Storage is unencrypted; avoid using shared devices
+for sensitive documents.
+
+PDF files open in the native device viewer (Quick Look on iOS, or an installed
+PDF viewer on Android). On the web they open in the browser's built-in viewer.
+Native previews use a temporary local copy bearing the original filename.
+The app supports Expo Go; restart the development server after installing dependencies.
+
+Use the options button beside a recent document to view or remove it. Removal
+requires confirmation. In Settings, choose light, dark, or system appearance;
+the choice is saved on the device.
+The native launch background follows the device appearance until the saved app
+preference loads; the in-app loading screen and subsequent screens use the app
+appearance. Expo Go may display its own launch screen instead of the configured
+native splash screen.
+
 ## Get started
 
 1. Install dependencies
