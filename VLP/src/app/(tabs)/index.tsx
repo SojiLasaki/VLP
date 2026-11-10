@@ -5,6 +5,7 @@ import { ActivityIndicator, Modal, Platform, Pressable, ScrollView, Text, View }
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDocuments } from '../../documents/document-context';
 import { openDocumentPreview } from '../../documents/open-document';
+import { fileLabel } from '../../documents/file-label';
 import type { RecentDocument } from '../../documents/storage';
 import createHomeStyles from '../../styles/home.styles';
 import { colors } from '../../styles/colors';
@@ -124,7 +125,7 @@ export default function Index() {
                   onPress={() => openRecent(file.id)}
                   style={({ pressed }) => [homeStyles.fileButton, pressed && homeStyles.pressed]}
                 >
-                  <View style={homeStyles.fileIcon}><Text style={homeStyles.fileIconText}>DOC</Text></View>
+                  <View style={homeStyles.fileIcon}><Text style={homeStyles.fileIconText}>{fileLabel(file)}</Text></View>
                   <View style={homeStyles.fileDetails}>
                     <Text numberOfLines={1} style={homeStyles.fileName}>{file.name}</Text>
                     <Text style={homeStyles.fileTime}>
